@@ -5,9 +5,9 @@
 Network Working Group                                        H. Birkholz
 Internet-Draft                                                          
 Intended status: Standards Track                                T. Heldt
-Expires: 4 March 2027                                                   
+Expires: 16 May 2027                                                    
                                                                O. Steele
-                                                          31 August 2026
+                                                        12 November 2026
 
 
                  Verifiable Agent Conversation Records
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 March 2027.
+   This Internet-Draft will expire on 16 May 2027.
 
 Copyright Notice
 
@@ -2332,6 +2332,11 @@ Contributors
    Thomas McCarthy-Howe
    Strolid
    Email: thomas.howe@strolid.com
+
+
+   Houda Labiod
+   Huawei Technologies France S.A.S.U.
+   Email: houda.labiod@huawei.com
 
 
 Authors' Addresses
