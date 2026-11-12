@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: "Checkout"
-      uses: actions/checkout@v5
+      uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       with:
         # Needed for tracing file history for replacement status
         fetch-depth: 0
@@ -32,7 +32,7 @@ jobs:
       run: date -u "+date=%FT%T" >>"$GITHUB_OUTPUT"
 
     - name: "Caching"
-      uses: actions/cache@v4
+      uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
       with:
         path: |
           .refcache
@@ -44,12 +44,12 @@ jobs:
         restore-keys: i-d-
 
     - name: "Build Drafts"
-      uses: martinthomson/i-d-template@v1
+      uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
       with:
         token: ${{ github.token }}
 
     - name: "Upload to Datatracker"
-      uses: martinthomson/i-d-template@v1
+      uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
       with:
         make: upload
       env:
@@ -57,7 +57,7 @@ jobs:
         GITHUB_STEP: upload
 
     - name: "Archive Submitted Drafts"
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
       with:
         name: published
         path: "versioned/draft-*-[0-9][0-9].*"

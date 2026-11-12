@@ -26,10 +26,10 @@ jobs:
       contents: write
     steps:
     - name: "Checkout"
-      uses: actions/checkout@v5
+      uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
     - name: "Update Generated Files"
-      uses: martinthomson/i-d-template@v1
+      uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
       with:
         make: update-files
         token: ${{ github.token }}

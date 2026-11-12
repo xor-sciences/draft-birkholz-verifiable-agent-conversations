@@ -20,12 +20,12 @@ jobs:
       contents: write
     steps:
     - name: "Checkout"
-      uses: actions/checkout@v5
+      uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
     # Note: No caching for this build!
 
     - name: "Update Archive"
-      uses: martinthomson/i-d-template@v1
+      uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
       env:
         ARCHIVE_FULL: ${{ inputs.archive_full }}
       with:
@@ -33,13 +33,13 @@ jobs:
         token: ${{ github.token }}
 
     - name: "Update GitHub Pages"
-      uses: martinthomson/i-d-template@v1
+      uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
       with:
         make: gh-archive
         token: ${{ github.token }}
 
     - name: "Save Archive"
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
       with:
         name: archive
         path: archive.json
